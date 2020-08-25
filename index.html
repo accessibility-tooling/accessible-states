@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <title>Accessibility Tools</title>
+    <link rel="stylesheet" href="./accessible-state.css">
+
+    <style>
+        html,
+        body {
+            padding: 30px;
+        }
+
+        .form-item {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-item label {
+            margin-bottom: 8px;
+        }
+
+        .form-item input {
+            height: 30px;
+        }
+
+        button {
+            height: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Accessible Modal Demo</h1>
+    <p>Here is a working example of accessible modals using the accessible-modal.js script.</p>
+
+    <p>For more information visit <a href="https://www.w3.org/TR/wai-aria-practices-1.1/examples/radio/radio-1/radio-1.html">here</a>.</p>
+
+    <label>Test Input</label>
+    <input type="text" />
+
+    <h2>Radio Group 1</h2>
+    <div class="a11y-radio-group" role="radiogroup" aria-labelledby="radio-group-title">
+        <span id="radio-group-title" class="a11y-hidden">Radio Group 1</span>
+        <div role="radio" aria-checked="false" tabindex="0">
+            <span>Radio option 1</span>
+        </div>
+        <div role="radio" aria-checked="false" tabindex="0">
+            <span>Radio option 1</span>
+        </div>
+        <div role="radio" aria-checked="false" tabindex="0">
+            <span>Radio option 1</span>
+        </div>
+    </div>
+
+    <h2>Radio Group 1</h2>
+    <div class="a11y-radio-group" role="radiogroup" aria-labelledby="radio-group-title">
+        <span id="radio-group-title" class="a11y-hidden">Radio Group 1</span>
+        <div role="radio" aria-checked="false" tabindex="0">
+            <span>Radio option 1</span>
+        </div>
+        <div role="radio" aria-checked="false" tabindex="0">
+            <span>Radio option 1</span>
+        </div>
+        <div role="radio" aria-checked="false" tabindex="0">
+            <span>Radio option 1</span>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./accessible-state.js"></script>
+    <script type="text/javascript" src="./demo.js"></script>
+</body>
+
+</html>
