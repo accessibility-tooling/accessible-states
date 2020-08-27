@@ -6,6 +6,13 @@ JS for quickly making any radio and checkbox states accessible
 
 Checkout the interactive demo here.
 
+## Roving Index
+
+A roving index is utilized to ensure that proper tab order is maintained across multiple radio groups. You are free to create as many radio groups as
+you want the script will properly handle dynamically updating the tabindex of the last focused radio button within each group.
+
+NOTE: You can't nest radio groups at this time if you nested radio groups the roving tab index will be broken.
+
 ## Getting Started
 
 ### Step 1 - Create a radio group container
