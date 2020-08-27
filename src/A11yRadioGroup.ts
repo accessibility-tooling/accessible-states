@@ -14,7 +14,6 @@ export default class A11yRadioGroup {
 
             // Bootstrap the focus events to handle properly flagging the aria-checked attribute.
             radio.addEventListener('focusin', this.focusIn);
-            radio.addEventListener('focusout', this.focusOut);
 
             // Bootstrap key press events for trapping radio navigation properly.
             radio.addEventListener('keydown', this.handleKeyboardPress);
@@ -33,20 +32,17 @@ export default class A11yRadioGroup {
         this.selectedNode = <HTMLDivElement>event.target;
 
         // If we tab off the radios key the tabindex so we can tab back into this group.
-        if (this.node.contains(document.activeElement)) {
-            
-        }
+        this.radios.forEach((radio) => {
+            if (radio !== event.target) {
+                radio.tabIndex = -1;
+                radio.setAttribute('aria-checked', 'false');
+            }
+        })
 
         this.selectedNode.tabIndex = 0;
         this.selectedNode.setAttribute('aria-checked', 'true');
 
         this.selectedNode.focus();
-    }
-
-    focusOut = (event: FocusEvent) => {
-        this.previousNode = <HTMLDivElement>event.target;
-        this.previousNode.tabIndex = -1;
-        this.selectedNode.setAttribute('aria-checked', 'false');
     }
 
     handleKeyboardPress = (event: KeyboardEvent) => {
