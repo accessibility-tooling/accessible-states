@@ -1,6 +1,6 @@
 import A11yRadioGroup from "./A11yRadioGroup";
 
-export default class A11yRadioManager {
+export default class A11yRadioUtility {
     a11yRadioGroups: A11yRadioGroup[] = [];
 
     constructor() {
@@ -13,9 +13,9 @@ export default class A11yRadioManager {
 }
 
 declare global {
-    interface Window { a11yRadio: A11yRadioManager; }
+    interface Window { a11yRadioUtil: A11yRadioUtility; }
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-    window.a11yRadio = window.a11yRadio || new A11yRadioManager();
+    window.a11yRadioUtil = window.a11yRadioUtil || new A11yRadioUtility();
 })
