@@ -2,12 +2,13 @@ const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-    entry: './src/A11yRadioManager.ts',
+    entry: './src/A11yRadioUtility.ts',
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         compress: true,
-        port: 9000
+        port: 9000,
     },
+    watch: true,
     module: {
         rules: [
             {

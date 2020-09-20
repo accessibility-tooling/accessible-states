@@ -4,7 +4,7 @@
   "description": "JS for quickly making any input radios and checkboxes accessible",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"webpack --config webpack.config.js\" \"webpack-dev-server --open\"",
+    "serve": "webpack-dev-server --open --watch",
     "compile": "webpack --config webpack.config.js"
   },
   "repository": {
